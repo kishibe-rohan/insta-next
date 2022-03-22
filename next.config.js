@@ -1,6 +1,6 @@
 const nextConfig = {
   images: {
-    domains: ["pbs.twimg.com"],
+    domains: ["pbs.twimg.com", "i.ibb.co", "upload.wikimedia.org"],
   },
 };
 
