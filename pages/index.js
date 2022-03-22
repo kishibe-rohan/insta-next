@@ -15,11 +15,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <div className="flex">
-        <Sidebar />
-        <Feed />
-        <Rightbar />
-      </div>
+      <Feed />
     </>
   );
 }
