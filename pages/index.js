@@ -1,8 +1,10 @@
 import Head from "next/head";
 
+import { Feed, Navbar, Sidebar, Rightbar, Stories } from "../components";
+
 export default function Home() {
   return (
-    <div className="text-red-500">
+    <>
       <Head>
         <title>InstaNext</title>
         <meta
@@ -11,7 +13,13 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      InstaNext
-    </div>
+
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </div>
+    </>
   );
 }
