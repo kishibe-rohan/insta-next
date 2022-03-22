@@ -40,3 +40,14 @@ export const stories = [
     name: "jonmoxley",
   },
 ];
+
+export const posts = [
+  {
+    id: 1,
+    username: "stevensuptic",
+    userImg:
+      "https://pbs.twimg.com/profile_images/1241961365725540353/s1_Jg8dJ_400x400.jpg",
+    img: "https://pbs.twimg.com/media/E5U0Kd6VUAUDlaG.jpg",
+    caption: "Vegas 2020",
+  },
+];
