@@ -6,7 +6,7 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { Navbar } from "../../components";
 
-const signin = ({ providers }) => {
+const Signin = ({ providers }) => {
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -54,4 +54,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default signin;
+export default Signin;
