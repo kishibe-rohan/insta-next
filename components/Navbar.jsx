@@ -3,8 +3,12 @@ import Image from 'next/image'
 
 import {SearchIcon,PlusCircleIcon,UserGroupIcon,HeartIcon,PaperAirplaneIcon,MenuIcon} from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
+import { useSession,signIn, signOut } from 'next-auth/react'
 
 const Navbar = () => {
+
+    const {data:session} = useSession();
+
   return (
     <div className='shadow-sm border-b bg-white sticky top-0 z-50'>
         <div className='flex max-w-6xl justify-between mx-5 lg:mx-auto'>
@@ -31,6 +35,8 @@ const Navbar = () => {
             <div className="flex items-center justify-end space-x-4">
                 <HomeIcon className="navBtn"/>
                 <MenuIcon className="h-6 md:hidden cursor-pointer"/>
+
+                {session?(<>
                 <div className="relative navBtn">
                 <PaperAirplaneIcon className='navBtn rotate-45'/>
                 <div className='absolute -top-1 -right-2 text-xs w-5 h-5 text-white bg-red-500 rounded-full flex items-center justify-center animate-pulse'>3</div>
@@ -39,10 +45,15 @@ const Navbar = () => {
                 <UserGroupIcon className='navBtn'/>
                 <HeartIcon className='navBtn'/>
 
-                <img src="https://i.ibb.co/SsRjvv5/me.jpg" className='h-10 w-10 rounded-full cursor-pointer'/>
-            </div>
+                <img src={session.user?.image} className='h-10 w-10 rounded-full cursor-pointer' onClick={signOut}/>
+               </>
+
+                ): (<button onClick={signIn}>Sign In</button>)
+                }
+               
             
         </div>
+    </div>
     </div>
   )
 }
