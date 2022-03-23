@@ -19,7 +19,7 @@ const Post = ({id,username,userImg,img,caption}) => {
       {/* Buttons */}
       <div className='flex justify-between px-4 pt-4'>
         <div className='flex space-x-4 '>
-            <HeartIconFilled className='btn'/>
+            <HeartIconFilled className='btn text-red-500'/>
             <ChatIcon className='btn'/>
             <PaperAirplaneIcon className='btn rotate-45'/>
         </div>
@@ -31,6 +31,13 @@ const Post = ({id,username,userImg,img,caption}) => {
         <span className='font-bold mr-1'>{username} </span>
         {caption}
       </p>
+
+      {/* Comment Input */}
+      <form className='flex items-center p-4'>
+        <EmojiHappyIcon className="h-7"/>
+        <input placeholder="Add a comment..." className="border-none flex-1 focus:ring-0 outline:none" type="text"></input>
+        <button className='font-semibold text-blue-400'>Post</button>
+      </form>
      
     </div>
   )
