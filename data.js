@@ -58,4 +58,19 @@ export const posts = [
     img: "https://pbs.twimg.com/media/E5U0Kd6VUAUDlaG.jpg",
     caption: "Vegas 2020",
   },
+  {
+    id: 2,
+    username: "hafu",
+    userImg: "https://pbs.twimg.com/media/DV-lu6cXkAAgoVd.jpg:large",
+    img: "https://pbs.twimg.com/media/C5EA-_7UEAE9SgA.jpg",
+    caption: "At the game expo..",
+  },
+  {
+    id: 3,
+    username: "javascriptmastery",
+    userImg:
+      "https://pbs.twimg.com/profile_images/1084342761644572672/WTytSpjs_400x400.jpg",
+    img: "https://pbs.twimg.com/media/FOT0YluaAAAIlgx.png",
+    caption: "Hello everyone! Check out my new video",
+  },
 ];

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Feed, Navbar, Sidebar, Rightbar, Stories } from "../components";
+import { Feed, Navbar } from "../components";
 
 export default function Home() {
   return (
